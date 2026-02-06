@@ -9,12 +9,11 @@ class Solution:
         for match in matches:
             w.append(match[0])
             l.append(match[1])
-        o= set(l)
+        c = Counter(l)
         for m in w:
-            if m not in o:
+            if m not in c:
                 winners.add(m)
 
-        c = Counter(l)
         for player, count in c.items():
             if count == 1:
                 one_loss.add(player)
