@@ -1,11 +1,9 @@
 class Solution:
-    def isAnagram(self, s, t):
-        if len(s) != len(t):
-            return False
-
-        countS, countT = {}, {}
-
-        for i in range(len(s)):
-            countS[s[i]] = 1 + countS.get(s[i], 0)
-            countT[t[i]] = 1 + countT.get(t[i], 0)
-        return countS == countT
+    def isAnagram(self, s: str, t: str) -> bool:
+        l = list(s)
+        k = list(t)
+        if sorted(l)==sorted(k):
+            return True
+        else:
+            return False 
+        
