@@ -1,5 +1,6 @@
 class Solution:
-    def wordPattern(self, pattern, s):
+    def wordPattern(self, pattern: str, s: str) -> bool:
+        
         words = s.split(" ")
         if len(pattern) != len(words):
             return False
@@ -14,3 +15,6 @@ class Solution:
             charToWord[c] = w
             wordToChar[w] = c
         return True
+        
+        
+            
