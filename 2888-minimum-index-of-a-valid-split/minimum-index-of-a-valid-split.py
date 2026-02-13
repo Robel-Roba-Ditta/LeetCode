@@ -9,7 +9,7 @@ class Solution:
                 break
 
         left = 0
-        for i in range(len(nums) - 1):
+        for i in range(len(nums)):
             if nums[i] == dominant:
                 left += 1
             left_size = i + 1
