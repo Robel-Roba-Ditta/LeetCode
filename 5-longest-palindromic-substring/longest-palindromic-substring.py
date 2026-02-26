@@ -1,5 +1,5 @@
 class Solution:
-    def longestPalindrome(self, s):
+    def longestPalindrome(self, s: str) -> str:
         res = ""
         for i in range(len(s)):
             s1 = self.helper(s, i, i)
@@ -17,3 +17,4 @@ class Solution:
             left -= 1
             right += 1
         return s[left+1:right]
+        
