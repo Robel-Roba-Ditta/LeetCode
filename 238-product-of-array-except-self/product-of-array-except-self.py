@@ -1,5 +1,5 @@
 class Solution:
-    def productExceptSelf(self, nums):
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
         res = [1] * (len(nums))
 
         for i in range(1, len(nums)):
@@ -9,3 +9,4 @@ class Solution:
             res[i] *= postfix
             postfix *= nums[i]
         return res
+        
