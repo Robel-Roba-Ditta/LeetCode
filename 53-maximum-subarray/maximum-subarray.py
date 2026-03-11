@@ -1,5 +1,5 @@
 class Solution:
-    def maxSubArray(self, nums):
+    def maxSubArray(self, nums: List[int]) -> int:
         rn = nums[0]
         mx = nums[0]
 
@@ -10,3 +10,4 @@ class Solution:
             mx = max(mx, rn)
         
         return mx
+        
