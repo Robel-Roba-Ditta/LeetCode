@@ -1,5 +1,5 @@
 class Solution:
-    def myPow(self, x, n):
+    def myPow(self, x: float, n: int) -> float:
         def pow(x, n):
             if n == 0:
                 return 1
@@ -15,3 +15,4 @@ class Solution:
             return pow(x, n)
         else:
             return 1 / pow(x, abs(n))
+        
