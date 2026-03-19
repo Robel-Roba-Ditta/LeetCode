@@ -8,20 +8,36 @@ class Solution:
     def deleteNode(self, root: Optional[TreeNode], key: int) -> Optional[TreeNode]:
         if not root:
             return None
+        
         if key < root.val:
             root.left = self.deleteNode(root.left, key)
+        
         elif key > root.val:
             root.right = self.deleteNode(root.right, key)
+        
         else:
+            # ✅ Node found
+            
+            # Case 1: no left child
             if not root.left:
                 return root.right
+            
+            # Case 2: no right child
             if not root.right:
                 return root.left
-            node = self.findMin(root.right)
-            root.val = node.val
-            root.right = self.deleteNode(root.right, node.val)
+            
+            # Case 3: two children
+            # find smallest in right subtree
+            min_node = self.findMin(root.right)
+            
+            # replace value
+            root.val = min_node.val
+            
+            # delete that node
+            root.right = self.deleteNode(root.right, min_node.val)
+        
         return root
-
+    
     def findMin(self, node):
         while node.left:
             node = node.left
