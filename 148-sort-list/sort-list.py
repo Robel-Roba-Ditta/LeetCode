@@ -1,20 +1,21 @@
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
-    def sortList(self, head):
+    def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if not head or not head.next:
             return head
-
         mid = self.get_mid(head)
         left = self.sortList(head)
         right = self.sortList(mid)
-
         return self.merge_two_sorted(left, right)
-
     def merge_two_sorted(self, list1, list2):
         if not list1:
             return list2
         if not list2:
             return list1
-
         sentinel = ListNode()
         prev = sentinel
         while list1 and list2:
@@ -25,14 +26,11 @@ class Solution:
                 prev.next = list2
                 list2 = list2.next
             prev = prev.next
-
         if list1:
             prev.next = list1
         else:
             prev.next = list2
-
         return sentinel.next
-
     def get_mid(self, head):
         slow, fast = head, head.next
         while fast and fast.next:
@@ -41,3 +39,4 @@ class Solution:
         mid = slow.next
         slow.next = None
         return mid
+        
