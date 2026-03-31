@@ -1,5 +1,5 @@
 class Solution:
-    def solveNQueens(self, n):
+    def solveNQueens(self, n: int) -> List[List[str]]:
         col = set()
         posDiag = set()
         negDiag = set()
@@ -31,3 +31,4 @@ class Solution:
 
         backtrack(0)
         return res
+        
