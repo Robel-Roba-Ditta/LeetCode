@@ -1,5 +1,5 @@
 class Solution:
-    def letterCombinations(self, digits):
+    def letterCombinations(self, digits: str) -> List[str]:
         length = len(digits)
         if length == 0:
             return []
@@ -13,3 +13,4 @@ class Solution:
         for char in letters[digits[current]]:
             self.dfs(digits, letters, length, result, combination+char, current+1)
         return result
+        
