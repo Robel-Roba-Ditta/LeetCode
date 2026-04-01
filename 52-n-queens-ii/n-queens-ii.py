@@ -1,5 +1,5 @@
 class Solution:
-    def totalNQueens(self, n):
+    def totalNQueens(self, n: int) -> int:
         diag1 = set()
         diag2 = set()
         usedCols = set()
@@ -27,3 +27,4 @@ class Solution:
             usedCols.remove(col)
         
         return solutions
+        
