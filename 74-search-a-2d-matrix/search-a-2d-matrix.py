@@ -1,5 +1,5 @@
 class Solution:
-    def searchMatrix(self, matrix, target):
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
         ROWS, COLS = len(matrix), len(matrix[0])
 
         top, bot = 0, ROWS - 1
@@ -25,3 +25,4 @@ class Solution:
             else:
                 return True
         return False
+        
