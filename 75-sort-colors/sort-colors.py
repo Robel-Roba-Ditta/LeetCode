@@ -1,5 +1,8 @@
 class Solution:
-    def sortColors(self, nums):
+    def sortColors(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
         low = 0
         high = len(nums) - 1
         mid = 0
@@ -14,4 +17,3 @@ class Solution:
             else:
                 nums[mid], nums[high] = nums[high], nums[mid]
                 high -= 1
-                
