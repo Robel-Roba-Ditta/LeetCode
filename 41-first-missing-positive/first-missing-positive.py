@@ -1,5 +1,5 @@
 class Solution:
-    def firstMissingPositive(self, nums):
+    def firstMissingPositive(self, nums: List[int]) -> int:
         if not nums:
             return 1
         nums = sorted(nums)
@@ -18,3 +18,4 @@ class Solution:
             else:
                 break
         return d + 1 if d + 1 > 0 else 1
+        
