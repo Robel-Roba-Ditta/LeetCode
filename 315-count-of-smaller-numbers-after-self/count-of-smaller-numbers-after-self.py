@@ -1,5 +1,5 @@
 class Solution:
-    def countSmaller(self, nums):
+    def countSmaller(self, nums: List[int]) -> List[int]:
         n = len(nums)
         res = [0] * n
         arr = list(enumerate(nums))  
@@ -31,3 +31,4 @@ class Solution:
             return merged
         merge_sort(0, n)
         return res
+        
