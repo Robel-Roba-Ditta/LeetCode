@@ -1,5 +1,5 @@
 class Solution:
-    def solve(self, board):
+    def solve(self, board: List[List[str]]) -> None:
         rows, cols = len(board), len(board[0])
         flag = set()
 
@@ -23,3 +23,7 @@ class Solution:
             for c in range(cols):
                 if board[r][c] == 'O' and (r, c) not in flag:
                     board[r][c] = 'X'
+        """
+        Do not return anything, modify board in-place instead.
+        """
+        
